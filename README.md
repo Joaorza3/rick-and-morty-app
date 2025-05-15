@@ -1,39 +1,88 @@
-# .
+# Rick and Morty Characters App
 
-This template should help get you started developing with Vue 3 in Vite.
+Este projeto consome a [API GraphQL da série Rick and Morty](https://rickandmortyapi.com/documentation) e implementa as seguintes interfaces:
 
-## Recommended IDE Setup
+## Desafio
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Página de listagem dos personagens:**  
+  Lista personagens da série com paginação, permite filtrar por nome e status. Ao selecionar um personagem, o usuário é direcionado para a página de detalhes.
 
-## Type Support for `.vue` Imports in TS
+- **Página do personagem:**  
+  Exibe informações detalhadas do personagem, incluindo os episódios em que aparece.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+---
 
-## Customize configuration
+## Configuração do Projeto
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Pré-requisitos
 
-## Project Setup
+- [Node.js](https://nodejs.org/) (versão recomendada: 18+)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+
+### Instalação
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Variáveis de Ambiente
+
+Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
+
+```env
+VITE_GRAPHQL_API_URL="https://rickandmortyapi.com/graphql"
+```
+
+> **Nota:** Você pode alterar o valor da URL se quiser apontar para outra instância da API.
+
+### Executando em modo desenvolvimento
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Build para produção
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Preview do build
+
+```sh
+npm run preview
+```
+
+### Checagem de tipos
+
+```sh
+npm run type-check
+```
+
+### Lint
 
 ```sh
 npm run lint
 ```
+
+---
+
+## Tecnologias Utilizadas
+
+- [Vue 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [PrimeVue](https://www.primevue.org/)
+- [Apollo Client](https://apollo.vuejs.org/api/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+## Estrutura de Pastas
+
+Veja a estrutura principal do projeto em [src/](src/):
+
+- `components/` – Componentes reutilizáveis
+- `views/` – Páginas principais
+- `queries/` – Consultas GraphQL
+- `utils/` – Utilitários
+- `lib/` – Configuração do Apollo Client
